@@ -59,7 +59,7 @@ var displayError = function (error) {
     // This will output an error like the following:
     // [gulp-sass] error message in file_name on line 1
     console.error(errorString);
-}
+};
 
 var onError = function (err) {
     notify.onError({
@@ -83,13 +83,11 @@ var prefixerOptions = {
 // ---------------
 
 gulp.task('clean:dist', function () {
-
     return gulp.src(bases.dist)
         .pipe(vinylPaths((paths) => {
             return del(paths, {force: true})
         }));
 });
-
 
 gulp.task('styles', function () {
     return gulp.src(bases.app + 'scss/styles.scss')
@@ -205,18 +203,11 @@ gulp.task('copy', function () {
         .pipe(size({gzip: true, showFiles: true}))
         .pipe(gulp.dest(bases.dist))
         .pipe(reload({stream: true}));
-    // copy img to dist directly
 
     //copy images to dist/image
     gulp.src(bases.app + 'images/**/*.*')
         .pipe(size({gzip: true, showFiles: true}))
         .pipe(gulp.dest(bases.dist + 'images/'))
-        .pipe(reload({stream: true}));
-
-
-    gulp.src(bases.app + 'video/**/*.*')
-        .pipe(size({gzip: true, showFiles: true}))
-        .pipe(gulp.dest(bases.dist + 'video/'))
         .pipe(reload({stream: true}));
 
     // copy meta files to dist directly
@@ -228,7 +219,6 @@ gulp.task('copy', function () {
     gulp.src([bases.app + 'manifest/**/*.*'])
         .pipe(gulp.dest(bases.root))
         .pipe(reload({stream: true}));
-
 });
 
 gulp.task('sass-lint', function () {
@@ -248,18 +238,18 @@ gulp.task('minify-html', function () {
 gulp.task('watch', function () {
     gulp.watch(bases.app + 'scss/**/*.scss', ['styles']);
     gulp.watch(bases.app + './*.html', ['minify-html']);
-    gulp.watch(bases.app + 'images/*', ['imagemin']);
+    gulp.watch(bases.app + 'images/**/*.*', ['imagemin']);
     gulp.watch(bases.app + 'js/*.js', ['js-app']);
 });
 
 gulp.task('imagemin', function () {
-    return gulp.src(bases.app + 'img/*')
+    return gulp.src(bases.app + 'images/**/*.*')
         .pipe(imagemin({
             progressive: true,
             svgoPlugins: [{removeViewBox: false}],
             use: [pngquant()]
         }))
-        .pipe(gulp.dest(bases.dist + 'img'));
+        .pipe(gulp.dest(bases.dist + 'images'));
 });
 
 gulp.task('sassdoc', function () {
