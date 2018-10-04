@@ -7,3 +7,50 @@
 // styled using ID selectors but take the time to think about the elements
 // that are common across all components of the page and use class selectors
 // where appropriate.
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  font-weight: bold;
+  text-align: center;
+}
+
+.wrapper > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+
+.header {
+  background: tomato;
+}
+
+.footer {
+  background: lightgreen;
+}
+
+.main {
+  text-align: left;
+  background: deepskyblue;
+}
+
+.nav {
+  background: gold;
+}
+
+.aside {
+  background: hotpink;
+}
+
+@media all and (min-width: 600px) {
+  .aside { flex: 1 auto;}
+  .nav { flex: 1 auto; }
+}
+
+
+
+@media all and (min-width: 800px) {
+  .main    { flex: 3 0px; }
+  .nav { order: 1; }
+  .main    { order: 2; }
+  .aside { order: 3; }
+  .footer  { order: 4; }
+}

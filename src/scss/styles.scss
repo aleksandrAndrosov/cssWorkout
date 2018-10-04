@@ -21,7 +21,7 @@
 // $pesticide-debug-depth - {boolean} adds shadows to all elements.
 // @source - http://pesticide.io/
 
-$pesticide-debug-outline: false;
+$pesticide-debug-outline: true;
 $pesticide-debug-depth: false;
 
 // ==========================================================================
@@ -83,3 +83,4 @@ $pesticide-debug-depth: false;
 // $Shame
 // ==========================================================================
 @import 'shame';
+
