@@ -2,6 +2,7 @@
 
 html {
   background-color: $color-background;
+  background-image: url("/images/bg.jpg");
   box-sizing: border-box;
   height: 100%;
 }
@@ -19,6 +20,7 @@ body {
   min-height: 100%;
   overflow-x: hidden;
   text-rendering: optimizeLegibility;
+  padding: 2%;
 }
 
 a {
@@ -41,4 +43,12 @@ h5,
 h6 {
   font-family: $font-family-display;
   font-weight: normal;
+}
+
+div {
+  margin: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }

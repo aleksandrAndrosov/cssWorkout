@@ -7,53 +7,96 @@
 // styled using ID selectors but take the time to think about the elements
 // that are common across all components of the page and use class selectors
 // where appropriate.
-.wrapper {
+body {
   display: flex;
-  flex-flow: row wrap;
-  font-weight: bold;
-  text-align: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-image: url("images/bg.jpg");
+  //background-color: orange;
 }
 
-.wrapper > * {
-  padding: 10px;
-  flex: 1 100%;
-}
-
-.header {
-  background: tomato;
-}
-
-.footer {
-  background: lightgreen;
-}
-
-.main {
-  text-align: left;
-  background: deepskyblue;
-}
-
-.nav {
-  background: gold;
-}
-
-.aside {
-  background: hotpink;
-}
-
-@media all and (min-width: 600px) {
-  .aside { flex: 1 auto;}
-  .nav { flex: 1 auto; }
-  .article {
-    flex: 1 auto;
+@media all and (min-width: 600px){
+  body {
+    background-color: coral;
   }
 }
 
-
-
-@media all and (min-width: 800px) {
-  .main    { flex: 3 0px; }
-  .nav { order: 1; }
-  .main    { order: 2; }
-  .aside { order: 3; }
-  .footer  { order: 4; }
+.header {
+  height: 50px;
+  width: 100%;
+  border: solid yellow 3px;
+  justify-content: space-between;
 }
+
+.welcome {
+  height: 153px;
+  flex-direction: column;
+
+}
+
+.banners {
+  height: 280px;
+}
+
+
+
+.icons {
+  flex-wrap: wrap;
+
+}
+
+/*@keyframes run {
+  0% {
+    transform: translate(0px);
+  }
+  25% {
+    transform: translate( 0px, 400px);
+  }
+
+  50% {
+    transform: translate( 0px, 380px);
+  }
+
+  75% {
+    transform: translate( 0px, 400px);
+  }
+
+  100% {
+    transform: translate( 0px, 400px);
+  }
+}
+
+/*#wave {
+  position: relative;
+  height: 70px;
+  width: 600px;
+  background: #e0efe3;
+  border: solid black 1px;
+}
+
+#wave:before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% 55% ;
+  width: 340px;
+  height: 80px;
+  background-color: white;
+  right: -5px;
+  top: 40px;
+}
+
+#wave:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% 55%;
+  width: 300px;
+  height: 70px;
+  background-color: #e0efe3;
+  left: 0;
+  top: 27px;
+}*/
+
+
