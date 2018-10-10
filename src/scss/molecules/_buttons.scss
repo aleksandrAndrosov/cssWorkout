@@ -1,0 +1,24 @@
+// ==========================================================================
+// $Buttons
+// Inlined to avoid required HTTP connection: h5bp.com/r
+// ==========================================================================
+.button-registration {
+  height: 60px;
+  width: 230px;//todo: no width in atoms
+
+  min-height: 60px;
+  max-height: 100px;
+  min-width: 230px;
+  max-width: 350px;
+
+  background-color: $color-button-registration;
+  color: $color-button-registration-text;
+
+  text-transform: uppercase;
+  user-select: none;
+
+  &:hover {
+    background-color: $color-button-registration * 1.2;
+    box-shadow: 0 5px 25px 0;
+  }
+}

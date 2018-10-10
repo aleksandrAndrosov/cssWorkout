@@ -1,17 +1,5 @@
-.button-registration {
-  border-radius: 50px ;
-  height: 60px;
-  width: 230px;//todo: no width in atoms
-  min-height: 60px;
-  max-height: 100px;
-  min-width: 230px;
-  max-width: 350px;
-  background-color: $color-button-registration;
-}
-
-.button-registration > span{
-  color: white;
-  text-transform: uppercase;
+.button {
+  border-radius: 50px;
 }
 
 

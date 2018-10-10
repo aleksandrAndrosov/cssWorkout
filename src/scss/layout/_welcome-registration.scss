@@ -1,0 +1,12 @@
+// ==========================================================================
+// $Welcome-registration
+// Inlined to avoid required HTTP connection: h5bp.com/r
+// ==========================================================================
+.welcome-registration {
+  position: relative;
+  //height: 153px;
+  margin:2%;
+
+  @extend .fx-c-c;
+  flex-direction: column;
+}

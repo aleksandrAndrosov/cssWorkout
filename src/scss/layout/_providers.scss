@@ -1,0 +1,12 @@
+// ==========================================================================
+// $Header
+// Inlined to avoid required HTTP connection: h5bp.com/r
+// ==========================================================================
+.providers {
+  position: relative;
+
+  @extend .fx-c-sb;
+  flex-direction: column;
+
+  margin: 2%;
+}

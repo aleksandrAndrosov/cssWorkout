@@ -1,0 +1,149 @@
+// ==========================================================================
+// $Accordion-list
+// Inlined to avoid required HTTP connection: h5bp.com/r
+// ==========================================================================
+.accordion {
+
+  &:before {
+    top: 50px;
+    bottom: 50px;
+    left: 12%;
+    border-left: solid 1px white;
+    animation: flipdown 0.5s ease both 2s;
+    @extend .ps-empty-abs;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    perspective: 900;
+    position: relative;
+    left: 12%;
+  }
+
+  li {
+
+    display: block;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    padding-bottom: 4px;
+    padding-top: 18px;
+    counter-increment: section;
+    animation: flipdown 0.5s ease both;
+
+    &:before {
+      content: counter(section);
+
+      position: absolute;
+      left: -55px;
+      top: 10px;
+      padding: 9px;
+      width: 15px;
+      height: 15px;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+
+      border-radius: 50%;
+      background-color: white;
+    }
+
+    &:after {
+      @extend .ps-empty-abs;
+      display: block;
+      left: -61px;
+      top: 4px;
+      width: 43px;
+      height: 43px;
+
+      border-radius: 50%;
+      border: solid 1px white;
+    }
+
+    $elements : 6 ;
+
+    @for $i from 1 through $elements {
+      &:nth-of-type(#{$i}) {
+        $j:($i+1)*0.25;
+        animation-delay: #{$j}s;
+      }
+    }
+
+    &:last-of-type {
+      padding-bottom: 0;
+    }
+  }
+
+  h2 {
+    display: block;
+    margin: 0;
+
+    color: white;
+    font-size: 1em;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+    user-select: none;
+  }
+
+  p {
+    position: relative;
+    overflow: hidden;
+    max-height: 800px;
+
+    transform: translate(0, 0);
+    margin-top: 14px;
+    z-index: 2;
+    opacity: 1;
+
+    color: white;
+    font-size: 17px;
+    line-height: 26px;
+    letter-spacing: 1px;
+
+    transition: all 0.25s ease-in-out;
+  }
+  input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  input:checked ~ p {
+    margin-top: 0;
+    max-height: 0;
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+}
+
+
+@keyframes flipdown {
+  0% {
+    opacity: 0;
+    transform-origin: top center;
+    transform: rotateX(-90deg);
+  }
+  5% {
+    opacity: 1;
+  }
+  80% {
+    transform: rotateX(8deg);
+  }
+  83% {
+    transform: rotateX(6deg);
+  }
+  92% {
+    transform: rotateX(-3deg);
+  }
+  100% {
+    transform-origin: top center;
+    transform: rotateX(0deg);
+  }
+}

@@ -1,0 +1,19 @@
+// ==========================================================================
+// $Body
+// Inlined to avoid required HTTP connection: h5bp.com/r
+// ==========================================================================
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-image: url("../images/bg.jpg");
+  background-color: coral;
+}
+
+@media all and (min-width: 600px){
+  body {
+    background-color: coral;
+    background-image: none;
+  }
+}

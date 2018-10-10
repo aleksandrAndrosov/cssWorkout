@@ -8,40 +8,7 @@
 //
 // @source - http://atomicdesign.bradfrost.com/chapter-2/
 @import 'buttons';
-
-header {
-  .logo {
-    position: relative;
-    left: 2px;
-    top: 3px;
-    height: 70px;
-    width: 160px;
-  }
-  .menu {
-    position: relative;
-    right: 12px;
-    top: 2px;
-    height: 25px;
-    width: 42px;
-    background-color: white;
-    border: 3px orange solid;
-    border-radius: 20px;
-  }
-  nav {
-
-  }
-}
-
-
-.welcome-header {
-  text-transform: uppercase;
-  font-size: 1.9em;
-  color: orange;
-}
-
-
-
-.section-header{
-  display: flex;
-  width: 100%;
-}
+@import "flex";
+@import "texts";
+@import "pseudo";
+@import "metriks";

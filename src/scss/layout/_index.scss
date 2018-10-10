@@ -7,96 +7,11 @@
 // styled using ID selectors but take the time to think about the elements
 // that are common across all components of the page and use class selectors
 // where appropriate.
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  background-image: url("images/bg.jpg");
-  //background-color: orange;
-}
 
-@media all and (min-width: 600px){
-  body {
-    background-color: coral;
-  }
-}
-
-.header {
-  height: 50px;
-  width: 100%;
-  border: solid yellow 3px;
-  justify-content: space-between;
-}
-
-.welcome {
-  height: 153px;
-  flex-direction: column;
-
-}
-
-.banners {
-  height: 280px;
-}
-
-
-
-.icons {
-  flex-wrap: wrap;
-
-}
-
-/*@keyframes run {
-  0% {
-    transform: translate(0px);
-  }
-  25% {
-    transform: translate( 0px, 400px);
-  }
-
-  50% {
-    transform: translate( 0px, 380px);
-  }
-
-  75% {
-    transform: translate( 0px, 400px);
-  }
-
-  100% {
-    transform: translate( 0px, 400px);
-  }
-}
-
-/*#wave {
-  position: relative;
-  height: 70px;
-  width: 600px;
-  background: #e0efe3;
-  border: solid black 1px;
-}
-
-#wave:before {
-  content: "";
-  display: block;
-  position: absolute;
-  border-radius: 100% 55% ;
-  width: 340px;
-  height: 80px;
-  background-color: white;
-  right: -5px;
-  top: 40px;
-}
-
-#wave:after {
-  content: "";
-  display: block;
-  position: absolute;
-  border-radius: 100% 55%;
-  width: 300px;
-  height: 70px;
-  background-color: #e0efe3;
-  left: 0;
-  top: 27px;
-}*/
-
-
+@import 'body';
+@import 'header';
+@import 'welcome-registration';
+@import 'accordion';
+@import 'banners';
+@import 'providers';
+@import 'footer';
