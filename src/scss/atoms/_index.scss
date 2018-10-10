@@ -9,24 +9,29 @@
 // @source - http://atomicdesign.bradfrost.com/chapter-2/
 @import 'buttons';
 
-.header-logo {
-  position: relative;
-  left: 2px;
-  top: 3px;
-  height: 70px;
-  width: 160px;
+header {
+  .logo {
+    position: relative;
+    left: 2px;
+    top: 3px;
+    height: 70px;
+    width: 160px;
+  }
+  .menu {
+    position: relative;
+    right: 12px;
+    top: 2px;
+    height: 25px;
+    width: 42px;
+    background-color: white;
+    border: 3px orange solid;
+    border-radius: 20px;
+  }
+  nav {
+
+  }
 }
 
-.header-menu {
-  position: relative;
-  right: 12px;
-  top: 2px;
-  height: 25px;
-  width: 42px;
-  background-color: white;
-  border: 3px orange solid;
-  border-radius: 20px;
-}
 
 .welcome-header {
   text-transform: uppercase;

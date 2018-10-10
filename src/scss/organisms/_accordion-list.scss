@@ -2,7 +2,7 @@
 // $Accordion-list
 // Inlined to avoid required HTTP connection: h5bp.com/r
 // ==========================================================================
-.steps{
+.accordion{
   flex-direction: row;
   align-items: stretch;
   justify-content: flex-start;
@@ -11,7 +11,7 @@
   //margin:0;
 }
 
-.steps:before {
+.accordion:before {
   display: block;
   position: absolute;
   top: 50px;

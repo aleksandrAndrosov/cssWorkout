@@ -45,16 +45,31 @@
     <link rel="stylesheet" href="css/styles.css">
 
     <!-- Modernizer, cause some browsers suck -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 
 </head>
 <body>
-    <div class="header">
-        <div class="header-logo">
+    <header>
+        <div class="logo">
             <img src="images/logo_pravda.png" >
         </div>
-        <div class="header-menu"></div>
-    </div>
+        <div class="menu">
+            <input id="burger" type="checkbox" />
+
+            <label for="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <nav>
+                <ul>
+                    <li><a href="#">Link #1</a></li>
+                    <li><a href="#">Link #2</a></li>
+                    <li><a href="#">Link #3</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
     <div class="welcome">
         <div class="welcome-header">Welcome bonus</div>
         <div class="welcome-text">Получи 1000 бонусных за бесплатную регистрацию и первый депозит</div>
@@ -62,7 +77,7 @@
     <div class="button-registration">
         <span>Регистрация</span>
     </div>
-    <div class="steps">
+    <div class="accordion">
         <ul class="accordion-list">
             <li class="accordion-element">
                 <input class="accordion-check" type="checkbox" checked>
@@ -96,9 +111,57 @@
             <div class="icon-wrapper-text">вороны никогда не забывают лиц</div>
             <img src="images/icons/2.jpg" class="icon">
         </div>
+        <div class="icon-wrapper">
+            <div class="icon-wrapper-text">у медуз нет сердца</div>
+            <img src="images/icons/3.jpg" class="icon">
+        </div>
+        <div class="icon-wrapper">
+            <div class="icon-wrapper-text">беременность акул длится 4 года</div>
+            <img src="images/icons/4.jpg" class="icon">
+        </div>
+        <div class="icon-wrapper">
+            <div class="icon-wrapper-text">слишком лень набирать текст</div>
+            <img src="images/icons/5.jpg" class="icon">
+        </div>
+        <div class="icon-wrapper">
+            <div class="icon-wrapper-text">лисы почти все делают в одиночестве</div>
+            <img src="images/icons/6.jpg" class="icon">
+        </div>
+        <div class="icon-wrapper">
+            <div class="icon-wrapper-text">зебры спят в стае</div>
+            <img src="images/icons/7.jpg" class="icon">
+        </div>
+        <div class="icon-wrapper">
+            <div class="icon-wrapper-text">лоремипсум</div>
+            <img src="images/icons/8.jpg" class="icon">
+        </div>
+        <div class="icon-wrapper">
+            <div class="icon-wrapper-text">текст9</div>
+            <img src="images/icons/9.jpg" class="icon">
+        </div>
+        <div class="icon-wrapper">
+            <div class="icon-wrapper-text">...</div>
+            <img src="images/icons/10.jpg" class="icon">
+        </div>
     </div>
-
-    <script src="js/main.js"></script>
+    <div class="wrap">
+        <svg width="100%" height="300px" viewBox="0 0 1200 300" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <g class="curve" stroke="#D6EFBA" fill="none" fill-rule="evenodd" transform="translate(0,90)">
+                <path id="glowPath" d="M 0, 60 S 300, -60, 600, 60, 800, -120, 1200 60"/>
+            </g>
+            <!--    <circle id="glow" r="2" cx="0" cy="90" fill="#fff"></circle>
+                <animateMotion xlink:href="#glow" dur="6s" begin="1.2s" count="indefinite">
+                  <mpath xlink:href="#glowPath" />
+                </animateMotion>-->
+        </svg>
+    </div>
+    <php></php>
+    <!--script>
+        setTimeout(function () {
+            document.getElementById("glowPath").setAttribute("d", "M 0, 60 S 200, 30, 400, 70, 600, -120, 1200 60")
+        },10000)
+    </script-->
+    <script defer src="js/main.js"></script>
 
 </body>
 </html>
