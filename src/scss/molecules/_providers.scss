@@ -4,20 +4,22 @@
 // ==========================================================================
 .providers {
 
-  h1 {
+  h2 {
     @extend .fx-c-sb;
     flex-direction: column;
     height: 80px;
     width: 100%;
 
-    color: white;
-    font-size: 2em;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 36px;
+    font-weight: 400;
     text-transform: uppercase;
 
     &:before, &:after {
       content: '';
       height: 1px;
-      width: 100%;
+      width: 400px;
       background: linear-gradient(to left, transparent 0%, white 40%, white 60%, transparent 100%);
     }
   }
