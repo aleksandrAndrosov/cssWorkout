@@ -4,10 +4,11 @@
 // project colors
 // =============
 
+$color-background: #FF7F50;
 $color-button-registration: #8019cc;
-$color-button-registration-text: white;
-$welcome-registration-text: white;
-$welcome-registration-h1: orange;
+$color-button-registration-text: #fff;
+$welcome-registration-text: #fff;
+$welcome-registration-h1: #FFA500;
 
 
 // descriptive colors
@@ -36,7 +37,7 @@ $color-shadow:              rgba($black, .125);
 $color-note:                #666;
 
 // Common colors
-$color-background:          $white;
+//$color-background:          $white;
 $color-background-shade:    $iron;
 $color-background-invert:   $hopbush;
 $color-text:                darken($pale-sky, 15);

@@ -5,13 +5,7 @@
 .welcome-registration {
   color: $welcome-registration-text;
 
-  * {
-    @extend .w-100perc;
-    @extend .pd-5px;
-    @extend .fx-c-c;
-  }
-
-  h1 {
+  h2 {
     color: $welcome-registration-h1;
     @extend .tx-upper;
     @extend .tx-section-h1;

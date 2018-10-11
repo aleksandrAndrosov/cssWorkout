@@ -3,6 +3,9 @@
 // Inlined to avoid required HTTP connection: h5bp.com/r
 // ==========================================================================
 .button-registration {
+  @extend .w-100perc;
+  @extend .pd-5px;
+  @extend .fx-c-c;
   height: 60px;
   width: 230px;//todo: no width in atoms
 

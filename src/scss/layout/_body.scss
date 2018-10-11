@@ -8,12 +8,12 @@ body {
   justify-content: flex-start;
   align-items: center;
   background-image: url("../images/bg.jpg");
-  background-color: coral;
+  background-color: $color-background;
 }
 
 @media all and (min-width: 600px){
   body {
-    background-color: coral;
+    background-color: $color-background;
     background-image: none;
   }
 }
