@@ -3,6 +3,7 @@
 // Inlined to avoid required HTTP connection: h5bp.com/r
 // ==========================================================================
 .banners{
-  @extend .fx-c-sb;
+  @extend .std-container;
+  @extend .fx-c-c;
   flex-wrap: wrap;
 }

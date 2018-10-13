@@ -4,7 +4,7 @@
 // ==========================================================================
 .welcome-registration {
   position: relative;
-  margin:$main-margin;
+  @extend .std-container;
 
   @extend .fx-c-c;
   flex-direction: column;

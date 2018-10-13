@@ -3,18 +3,12 @@
 // Inlined to avoid required HTTP connection: h5bp.com/r
 // ==========================================================================
 .button-registration {
-  @extend .w-100perc;
-  @extend .pd-5px;
   @extend .fx-c-c;
+  width: 230px;
   height: 60px;
-  width: 230px;//todo: no width in atoms
-
-  min-height: 60px;
-  max-height: 100px;
-  min-width: 230px;
-  max-width: 350px;
-
-  background-color: $color-button-registration;
+  box-shadow: 0 10px 21px rgba(195, 44, 250, 0.21);
+  border-radius: 30px;
+  background-image: linear-gradient(to top, #8640ff 0%, #9760f6 100%);
   color: $color-button-registration-text;
 
   text-transform: uppercase;
@@ -23,5 +17,6 @@
   &:hover {
     background-color: $color-button-registration * 1.2;
     box-shadow: 0 5px 25px 0;
+    cursor: pointer;
   }
 }

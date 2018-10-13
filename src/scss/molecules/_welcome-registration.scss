@@ -4,15 +4,27 @@
 // ==========================================================================
 .welcome-registration {
   color: $welcome-registration-text;
+  .text{
+    min-width: 245px;
+    max-width: 80%;
+    //margin: 24px;
 
-  h2 {
-    color: $welcome-registration-h1;
-    @extend .tx-upper;
-    @extend .tx-section-h1;
-  };
+    font-size: 18px;
+    text-align: center;
+
+    span {
+      font-weight: bold;
+    }
+  }
+
+  img {
+    width: 277px;
+    margin: 24px;
+  }
 
   .button {
-    @extend .button-registration
+    @extend .button-registration;
+    margin: 26px;
   }
 
   @extend .pd-5px;

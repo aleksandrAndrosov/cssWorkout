@@ -26,14 +26,15 @@
 
   .icons {
     position: relative;
+    width: 310px;
     @extend .fx-c-c;
     flex-wrap: wrap;
 
     .wrapper {
       @extend .fx-c-c;
       position: relative;
-      width: 42%;
-      height: 42%;
+      width: 135px;
+      height: 136px;
       margin: 5px;
       padding: 5px;
       border-radius: 20px;
@@ -80,6 +81,11 @@
     height: 100%;
     border-radius: 18px;
     z-index: 0;
+  }
+
+  .button {
+    @extend .button-registration;
+    margin: 26px;
   }
 }
 
