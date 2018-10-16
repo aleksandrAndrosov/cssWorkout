@@ -19,7 +19,8 @@ body {
 
 @media all and (min-width: 768px){
   body {
-    background-color: $color-background;
-    background-image: none;
+    background: url("/images/main-banner/main-banner.png") center top no-repeat,
+    radial-gradient(circle 2423px at center, #ffcc00 0%, #ff7c00 100%);
+    background-size: 1920, auto;
   }
 }

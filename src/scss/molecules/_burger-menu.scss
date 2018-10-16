@@ -3,34 +3,34 @@
 // Inlined to avoid required HTTP connection: h5bp.com/r
 // ==========================================================================
 $blackColor: #020304;
+.menu {
+  @extend .fx-c-c;
 
-  input{
+  input {
+    position: absolute;
     visibility: hidden;
   }
   input + label {
+    @extend .fx-c-sb;
+    flex-direction: column;
     position: relative;
     //top: 40px;
     //right: 40px;
-    height: 20px;
+    height: 10px;
     width: 15px;
     z-index: 5;
     span {
-      position: absolute;
+      position: relative;
       width: 100%;
       height: 2px;
-      top: 50%;
-      margin-top: -1px;
+      //top: 50%;
+      //margin-top: -4px;
       left: 0;
       display: block;
-      background: $blackColor;
-      transition: .5s;
+      background: #9760f6;
+      transition: 0.5s;
     }
-    span:first-child {
-      top: 3px;
-    }
-    span:last-child {
-      top: 16px;
-    }
+
   }
   label:hover {
     cursor: pointer;
@@ -38,52 +38,51 @@ $blackColor: #020304;
   input:checked + label {
     span {
       opacity: 0;
-      top: 50%;
     }
     span:first-child {
       opacity: 1;
+      top: 4px;
       transform: rotate(405deg);
     }
     span:last-child {
       opacity: 1;
+      top: -4px;
       transform: rotate(-405deg);
     }
   }
   input ~ nav {
-    background: white;
+    @extend .fx-c-c;
+    flex-direction: column;
+    background: #333333;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 0;
     z-index: 3;
-    transition: .5s;
-    transition-delay: .5s;
+    transition: 0.2s;
     overflow: hidden;
-    > ul {
-      text-align: center;
-      position: absolute;
-      top: 35%;
-      left: 20%;
-      right: 20%;
-      > li {
-        opacity: 0;
-        transition: .5s;
-        transition-delay: 0s;
-        > a {
-          text-decoration: none;
-          text-transform: uppercase;
-          color: $blackColor;
-          font-weight: 700;
-          font-family: sans-serif;
-          display: block;
-          padding: 30px;
-        }
+
+    div{
+      margin: 15px;
+    }
+
+    .sign-in {
+      @extend .fx-c-c;
+      flex-direction: column;
+      color: #fff;
+
+      a {
+        margin-top: 5px;
+        color: #fa2947;
+        font-size: 16px;
+        text-transform: uppercase;
       }
     }
   }
+
   input:checked ~ nav {
-    height: 100%;
+    height: 569px;
     transition-delay: 0s;
     > ul {
       > li {
@@ -92,3 +91,4 @@ $blackColor: #020304;
       }
     }
   }
+}

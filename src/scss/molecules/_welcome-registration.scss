@@ -3,11 +3,13 @@
 // Inlined to avoid required HTTP connection: h5bp.com/r
 // ==========================================================================
 .welcome-registration {
+  @extend .pd-5px;
+  @extend .fx-c-c;
   color: $welcome-registration-text;
+
   .text{
     min-width: 245px;
     max-width: 80%;
-    //margin: 24px;
 
     font-size: 18px;
     text-align: center;
@@ -27,6 +29,26 @@
     margin: 26px;
   }
 
-  @extend .pd-5px;
-  @extend .fx-c-c;
+
+}
+
+@media all and (min-width: 768px){
+  .welcome-registration {
+    margin:{
+      top: 50px;
+      bottom: 100px;
+    }
+    .text {
+      width: 380px;
+      font-size: 24px;
+
+      span {
+        color: #9760f6;
+      }
+    }
+
+    img {
+      width: 395px;
+    }
+  }
 }

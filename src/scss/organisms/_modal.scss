@@ -1,0 +1,240 @@
+$color-settings: (
+        'color': (
+                'a': ( 0: #444, 'name': 'gray' ),
+                'b': ( 0: #f06, 'name': 'pink'),
+                'c': ( 0: #349bff, 'name': 'blue'),
+        )
+);
+
+$transition-duration: .4s;
+$transition-easing: ease-in-out;
+$transition: all $transition-duration $transition-easing;
+
+$btn-color: color(b);
+$btn-glow: 0 0 .6rem color($btn-color, -6);
+
+//**************************************
+
+
+#trigger {
+}
+
+#modal-open:checked {
+  ~ .c-modal__backdrop {
+    opacity: 1;
+    z-index: 1000;
+
+    label {
+      //height: 100%;
+      //position: absolute;
+      //width: 100%;
+    }
+  }
+
+  ~ .c-modal__container {
+    top: 0;
+  }
+}
+
+.c-modal {
+  &__control {
+    left: -100vw;
+    position: fixed;
+    top: -100vh;
+    visibility: hidden;
+  }
+
+  &__backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    height: 569px;
+    opacity: 0;
+
+
+    transition: $transition;
+    width: 100%;
+    z-index: -1;
+    background: $color-registration-modal-background;
+  }
+
+  &__container {
+    @extend .fx-c-c;
+    flex-direction: column;
+    position: fixed;
+    top: 200vh;
+    left: 0;
+
+    width: 100%;
+    height: 569px;
+    max-height: 90vh;
+
+    transition: $transition;
+
+    z-index: 1010;
+
+    label[for='modal-close'] {
+      display: block;
+    }
+  }
+
+  &__header {
+    @extend .fx-c-c;
+    flex-direction: column;
+    position: relative;
+    padding: {
+      top: 20px;
+      right: 20px;
+      left: 20px;
+    }
+
+    font-size: 26px;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    h2 {
+      font: {
+        size: 32px;
+        weight: bold;
+      }
+
+      margin-top: 21px;
+    }
+  }
+
+  &__form {
+    @extend .fx-c-c;
+    flex-direction: column;
+
+    .checkbox-wrapper {
+      @extend .fx-c-st;
+      width: 281px;
+      margin: 8px;
+
+      .checkbox{
+        -webkit-appearance: none;
+        width: 16px;
+        height: 16px;
+        border-radius: 5px;
+        border: 1px solid #9760f6;
+        background-color: #fff;
+        padding: 2px;
+
+        //margin: 8px;
+        //font-size: 14px;
+        //color: #898989;
+      }
+
+      .checkbox:checked{
+        background-color: #9a72f6;
+      }
+
+      label {
+        font-size: 12px;
+        margin-left: 8px;
+      }
+    }
+  }
+  &__input-text {
+    width: 233px;
+    height: 7px;
+    border-radius: 5px;
+    background-color: #ddcdf6;
+    border: 2px solid #ddcdf6;
+    padding: 22px;
+    margin: 8px;
+    font-size: 14px;
+    color: #898989;
+
+    &:focus {
+      border: 2px solid #9760f6;
+      background-color: #ffffff;
+      opacity: 1;
+    }
+  }
+
+
+
+
+
+  &__footer {
+    border: {
+      top: .1rem solid color(white, 3);
+    }
+    padding: {
+      top: 4vw;
+    }
+    text-align: center;
+  }
+}
+
+.c-button {
+  background: none;
+  //border: 2px solid black;
+  color: $btn-color;
+  cursor: pointer;
+  display: inline-block;
+  font: {
+    size: 2rem;
+  }
+  padding: .2em 1em;
+  text-align: center;
+  transition: $transition;
+  &:hover {
+    box-shadow: $btn-glow, inset $btn-glow;
+    text-shadow: $btn-glow;
+  }
+
+  &__close {
+    color: #9760f6;
+    cursor: pointer;
+    //float: right;
+    height: 24px;
+    //ine-height: 4rem;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: $transition;
+    width: 4rem;
+    &:before,
+    &:after {
+      @extend .ps-empty-abs;
+      left: 50%;
+      top: 50%;
+
+      display: block;
+      height: 3px;
+      width: 28px;
+
+      background: #9760f6;
+
+      transform: rotate(45deg) translate(-50%, -50%) {
+        origin: top left;
+      };
+      transition: $transition;
+    }
+    &:after {
+      transform: rotate(-45deg) translate(-50%, -50%);
+    }
+    &:hover {
+      border-color: dimgrey;
+      &:before,
+      &:after {
+        background-color: dimgrey;
+      }
+    }
+  }
+}
+
+//**************************************
+
+/* {
+  &, &:before, &:after {
+    box-sizing: border-box;
+    &, &:focus, &:active, &:focus:active {
+      outline: none;
+    }
+  }
+}*/
