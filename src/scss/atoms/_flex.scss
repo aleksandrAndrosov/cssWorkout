@@ -10,9 +10,15 @@
   justify-content: space-between;
 }
 
+.fx-c-st {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
 .fx-div {
   position: relative;
-  margin: 2%;
+  margin: $main-margin;
 }
 
 

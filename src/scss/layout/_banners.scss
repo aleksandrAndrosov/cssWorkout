@@ -3,6 +3,13 @@
 // Inlined to avoid required HTTP connection: h5bp.com/r
 // ==========================================================================
 .banners{
+  @extend .std-container;
   @extend .fx-c-sb;
   flex-wrap: wrap;
+}
+
+@media all and (min-width: 768px) {
+  .banners {
+    justify-content: center;
+  }
 }

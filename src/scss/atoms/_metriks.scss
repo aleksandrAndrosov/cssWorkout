@@ -5,3 +5,12 @@
 .pd-5px {
   padding: 5px;
 }
+
+.std-container {
+  min-width: 320px;
+  max-width: 1200px; //for example
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 5px;
+  box-sizing: border-box;
+}

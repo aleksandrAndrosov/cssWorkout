@@ -10,9 +10,11 @@
 // @source - http://atomicdesign.bradfrost.com/chapter-2/
 
 @import "buttons";
+@import "banners";
 @import "welcome-registration";
 @import 'accordion-list';
 @import "curves";
 @import "providers";
 @import "header";
-//@import "burger-menu";
+@import "footer";
+@import "burger-menu";

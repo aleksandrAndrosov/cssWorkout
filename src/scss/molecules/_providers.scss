@@ -4,14 +4,16 @@
 // ==========================================================================
 .providers {
 
-  h1 {
+  h2 {
     @extend .fx-c-sb;
     flex-direction: column;
     height: 80px;
     width: 100%;
 
-    color: white;
-    font-size: 2em;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 36px;
+    font-weight: 400;
     text-transform: uppercase;
 
     &:before, &:after {
@@ -24,14 +26,15 @@
 
   .icons {
     position: relative;
+    width: 310px;
     @extend .fx-c-c;
     flex-wrap: wrap;
 
     .wrapper {
       @extend .fx-c-c;
       position: relative;
-      width: 42%;
-      height: 42%;
+      width: 135px;
+      height: 136px;
       margin: 5px;
       padding: 5px;
       border-radius: 20px;
@@ -45,7 +48,7 @@
 
       width: 150%;
       height: 150%;
-      background: linear-gradient(#ebff0f 0%,#206018 24%,#f23cbb 53%,#1b1268 80%,#dbf043 100%);
+      background: linear-gradient(#ebff0f 0%, #206018 24%, #f23cbb 53%, #1b1268 80%, #dbf043 100%);
       z-index: 0;
       visibility: visible;
       animation: rotation 2s linear infinite;
@@ -78,6 +81,11 @@
     height: 100%;
     border-radius: 18px;
     z-index: 0;
+  }
+
+  .button {
+    @extend .button-registration;
+    margin: 26px;
   }
 }
 
@@ -115,3 +123,29 @@
 }
 
 
+@media all and (min-width: 768px){
+  .providers {
+    .icons {
+      width: 1000px;
+
+      .wrapper {
+        width: 225px;
+        height: 150px;
+      }
+
+      .wrapper:hover:before {
+        width: 170%;
+        height: 170%;
+      }
+
+      img {
+        height: 150px;
+        z-index: 0;
+      }
+    }
+  }
+
+  label {
+    visibility: hidden;
+  }
+}

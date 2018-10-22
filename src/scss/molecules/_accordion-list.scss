@@ -17,53 +17,53 @@
     display: flex;
     flex-direction: column;
     list-style: none;
-    perspective: 900;
-    position: relative;
-    left: 12%;
+    //position: relative;
+    //left: 12%;
   }
 
   li {
 
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     position: relative;
-    padding: 0;
-    margin: 0;
+    margin-bottom: 0;
+    padding: 18px 0 14px 0;
     width: 100%;
-    padding-bottom: 4px;
-    padding-top: 18px;
     counter-increment: section;
     animation: flipdown 0.5s ease both;
 
     &:before {
       content: counter(section);
 
-      position: absolute;
-      left: -55px;
-      top: 10px;
-      padding: 9px;
-      width: 15px;
-      height: 15px;
-      display: flex;
+      @extend .fx-c-c;
+      order: 0;
       justify-content: center;
       align-content: center;
 
+      position: relative;
+      left: -24px;
+      width: 35px;
+      height: 35px;
+
       border-radius: 50%;
-      background-color: white;
+      background-color: #fff;
     }
 
     &:after {
-      @extend .ps-empty-abs;
+      content: '';
+      position: relative;
+      order: 1;
       display: block;
-      left: -61px;
-      top: 4px;
-      width: 43px;
-      height: 43px;
+      left: -66px;
+      width: 47px;
+      height: 47px;
 
       border-radius: 50%;
-      border: solid 1px white;
+      border: solid 1px #fff;
     }
 
-    $elements : 6 ;
+    $elements : 6;
 
     @for $i from 1 through $elements {
       &:nth-of-type(#{$i}) {
@@ -78,11 +78,15 @@
   }
 
   h2 {
+    order: 2;
     display: block;
     margin: 0;
+    position: relative;
+    left: -52px;
+
 
     color: white;
-    font-size: 1em;
+    font-size: 18px;
     letter-spacing: 1px;
 
     cursor: pointer;
@@ -90,19 +94,23 @@
   }
 
   p {
+    order: 3;
     position: relative;
     overflow: hidden;
-    max-height: 800px;
+    width: 208px;
+    margin-left: auto;
+    //max-height: 800px;
 
     transform: translate(0, 0);
-    margin-top: 14px;
+    margin-top: 4px;
+    margin-bottom: 0;
     z-index: 2;
     opacity: 1;
 
     color: white;
-    font-size: 17px;
-    line-height: 26px;
-    letter-spacing: 1px;
+    font-size: 12px;
+    line-height: 16px;
+    //letter-spacing: 1px;
 
     transition: all 0.25s ease-in-out;
   }

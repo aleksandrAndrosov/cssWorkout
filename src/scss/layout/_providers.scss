@@ -4,9 +4,23 @@
 // ==========================================================================
 .providers {
   position: relative;
+  @extend .std-container;
 
   @extend .fx-c-sb;
   flex-direction: column;
+  
+  &:before {
+    @extend .ps-empty-abs;
+    top: 70px;
+    bottom: 10px;
+    width: 100%;
+    height: 725px;
+    z-index: -10;
 
-  margin: 2%;
+    background: url("/images/coins.png") no-repeat;
+    background-size: cover;
+    opacity: 0.35;
+
+  }
+
 }

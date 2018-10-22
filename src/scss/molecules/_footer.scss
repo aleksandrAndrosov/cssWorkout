@@ -1,0 +1,67 @@
+// ==========================================================================
+// $Header
+// Inlined to avoid required HTTP connection: h5bp.com/r
+// ==========================================================================
+footer {
+  .about {
+    @extend .fx-c-c;
+    flex-direction: column;
+    height: 180px;
+    width: 100%;
+    background-color: #232227;
+
+    .information{
+      position: relative;
+      margin-top: 40px;
+      height: 20px;
+      width: 20px;
+      border: {
+        radius: 50%;
+      }
+      border: 3px solid #ffb403;
+
+      &:before, &:after {
+        @extend .ps-empty-abs;
+        top: 8px;
+        left: 8px;
+        height: 10px;
+        width: 4px;
+        background-color: #fff;
+        border :{
+          radius: 50%;
+        }
+      }
+
+      &:after {
+        top: 2px;
+        height: 4px;
+      }
+    }
+  }
+
+  .banners {
+    @extend .fx-c-c;
+    padding: 40px 2px;
+    background-color: #0e0b11;
+
+    img {
+      margin: 2px 15px;
+      opacity: 0.5;
+    }
+
+  }
+}
+
+@media all and (min-width: 768px){
+  footer {
+    width: 1920px;
+    background-color: #232227;
+    .about {
+
+    }
+
+    .banners {
+      visibility: hidden;
+    }
+  }
+}
