@@ -10,7 +10,8 @@
   "homepage": "",
   "scripts": {
     "gulp": "gulp",
-    "deploy": "gulp build"
+    "build": "gulp build",
+    "deploy": "gulp build && firebase deploy"
   },
   "dependencies": {},
   "devDependencies": {
