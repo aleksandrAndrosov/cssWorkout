@@ -5,6 +5,12 @@
 $blackColor: #020304;
 .menu {
   @extend .fx-c-c;
+  margin:30px;
+  width: 48px;
+  height: 31px;
+  border: 2px solid #fb853e;
+  background-color: #ffffff;
+  border-radius: 20px;
 
   input {
     position: absolute;
@@ -63,7 +69,7 @@ $blackColor: #020304;
     transition: 0.2s;
     overflow: hidden;
 
-    div{
+    div {
       margin: 15px;
     }
 
@@ -91,4 +97,49 @@ $blackColor: #020304;
       }
     }
   }
+}
+
+@media all and (min-width: 768px){
+  .menu {
+    border: hidden;
+    background-color: transparent;
+    width: 300px;
+    position: relative;
+    flex-grow: 2;
+
+    .burger-label-cross {
+      visibility: hidden;
+    }
+
+    input {
+      visibility: hidden;
+    }
+
+    input:checked ~ nav, input ~ nav {
+      flex-direction: row;
+      justify-content: space-around;
+
+      height: 0;
+      position: relative;
+      overflow: visible;
+
+      .sign-in {
+        font-size: 8px;
+
+        a {
+          font-size: 10px;
+        }
+      }
+
+      .button-registration {
+        width: 150px;
+        height: 36px;
+        font-size: 11px;
+      }
+
+
+    }
+
+  }
+
 }

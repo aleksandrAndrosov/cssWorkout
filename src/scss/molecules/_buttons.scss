@@ -83,3 +83,31 @@
 
 
 }
+
+@media all and (min-width: 768px) {
+  .button-welcome-bonus {
+    width: 126px;
+    height: 34px;
+    font-size: 10px;
+
+    .plus {
+      width: 15px;
+      height: 15px;
+      left: -8px;
+
+      &:before, &:after{
+        width: 9px;
+        height: 1px;
+        top: 7px;
+        left: 3px;
+      }
+
+      &:after {
+        height: 9px;
+        width: 1px;
+        top: 3px;
+        left: 7px;
+      }
+    }
+  }
+}
