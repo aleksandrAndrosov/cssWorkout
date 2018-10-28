@@ -5,6 +5,7 @@ script:
   - npm run build
 install:
   - npm install
+  - npm run relockdeps
   - npm install -g firebase-tools
 after_success:
   - firebase deploy --token $FIREBASE_TOKEN
