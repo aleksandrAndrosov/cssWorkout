@@ -2,12 +2,13 @@
 // $Accordion-list
 // Inlined to avoid required HTTP connection: h5bp.com/r
 // ==========================================================================
+
 .accordion {
 
   &:before {
     top: 50px;
     bottom: 50px;
-    left: 12%;
+    left: 34px;
     border-left: solid 1px white;
     animation: flipdown 0.5s ease both 2s;
     @extend .ps-empty-abs;
@@ -116,11 +117,12 @@
   }
   input {
     position: absolute;
-    width: 100%;
+    width: 120%;
     height: 100%;
     z-index: 1;
     opacity: 0;
     cursor: pointer;
+    transform: translateX(-10%)
   }
 
   input:checked ~ p {
@@ -153,5 +155,61 @@
   100% {
     transform-origin: top center;
     transform: rotateX(0deg);
+  }
+}
+
+@media all and(min-width: 768px) {
+  .accordion {
+
+
+    &:before{
+      position: absolute;
+      top: 71px;
+      left: 100px;
+      right: 100px;
+      height: 1px;
+
+
+      border-left: none;
+      border-top: solid 1px white;
+    }
+
+    ul {
+      flex-direction: row;
+      padding: 0;
+    }
+
+    li {
+      flex-direction: column;
+      width: auto;
+
+      h2 {
+        left:0;
+      }
+
+      p {
+        width: 300px;
+        margin: 20px;
+      }
+
+      &:before {
+
+        top: 20px;
+        left: 0;
+
+      }
+
+      &:after {
+
+        top: -22px;
+        left:0;
+
+      }
+    }
+
+    input:checked ~ p {
+      width: 200px;
+      margin: 0;
+    }
   }
 }
