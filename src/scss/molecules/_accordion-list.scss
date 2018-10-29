@@ -2,12 +2,13 @@
 // $Accordion-list
 // Inlined to avoid required HTTP connection: h5bp.com/r
 // ==========================================================================
+
 .accordion {
 
   &:before {
     top: 50px;
     bottom: 50px;
-    left: 12%;
+    left: 34px;
     border-left: solid 1px white;
     animation: flipdown 0.5s ease both 2s;
     @extend .ps-empty-abs;
@@ -116,11 +117,12 @@
   }
   input {
     position: absolute;
-    width: 100%;
+    width: 120%;
     height: 100%;
     z-index: 1;
     opacity: 0;
     cursor: pointer;
+    transform: translateX(-10%)
   }
 
   input:checked ~ p {
