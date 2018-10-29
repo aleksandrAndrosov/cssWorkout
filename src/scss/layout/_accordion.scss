@@ -7,3 +7,10 @@
   position: relative;
   width: 280px;
 }
+
+@media all and(min-width: 768px) {
+  .accordion {
+    width: auto;
+
+  }
+}

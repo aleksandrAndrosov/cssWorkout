@@ -157,3 +157,59 @@
     transform: rotateX(0deg);
   }
 }
+
+@media all and(min-width: 768px) {
+  .accordion {
+
+
+    &:before{
+      position: absolute;
+      top: 71px;
+      left: 100px;
+      right: 100px;
+      height: 1px;
+
+
+      border-left: none;
+      border-top: solid 1px white;
+    }
+
+    ul {
+      flex-direction: row;
+      padding: 0;
+    }
+
+    li {
+      flex-direction: column;
+      width: auto;
+
+      h2 {
+        left:0;
+      }
+
+      p {
+        width: 300px;
+        margin: 20px;
+      }
+
+      &:before {
+
+        top: 20px;
+        left: 0;
+
+      }
+
+      &:after {
+
+        top: -22px;
+        left:0;
+
+      }
+    }
+
+    input:checked ~ p {
+      width: 200px;
+      margin: 0;
+    }
+  }
+}
