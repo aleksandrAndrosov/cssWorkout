@@ -117,7 +117,7 @@ $blackColor: #020304;
 
     input:checked ~ nav, input ~ nav {
       flex-direction: row;
-      justify-content: space-around;
+      justify-content: center;
 
       height: 0;
       position: relative;
