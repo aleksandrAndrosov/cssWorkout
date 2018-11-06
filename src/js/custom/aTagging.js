@@ -1,5 +1,5 @@
 (function aTagging(){
     const tag='?btag=xxxx';
-    const links = document.getElementsByTagName('a');
+    const links = document.querySelectorAll('a');
     Array.prototype.map.call(links,a=>a.href += tag);
 })();
