@@ -198,6 +198,12 @@ gulp.task('copy', function () {
         .pipe(gulp.dest(bases.dist + 'js/libs'))
         .pipe(reload({stream: true}));
 
+    // copy js folders to dist directly
+    gulp.src(bases.app + 'js/**/**.js')
+        .pipe(size({gzip: true, showFiles: true}))
+        .pipe(gulp.dest(bases.dist + 'js'))
+        .pipe(reload({stream: true}));
+
     // copy icons to dist directly
     gulp.src(bases.app + 'icons/**/*.*')
         .pipe(size({gzip: true, showFiles: true}))
