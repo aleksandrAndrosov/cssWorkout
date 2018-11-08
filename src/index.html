@@ -4,7 +4,7 @@
 <!--[if IE 9]>
 <html class="no-js gt-ie9 ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js gt-ie9"> <!--<![endif]-->
+<html class="no-js gt-ie9" xmlns="http://www.w3.org/1999/html"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -134,38 +134,40 @@
     <div class="providers">
         <h2>Провайдеры</h2>
         <div class="icons">
-            <div class="wrapper">
+          <div class="wrappers-wrapper" id="slider">
+              <a href="#"><div class="wrapper">
                 <div class="text">у пиявок 32 мозга</div>
                 <img src="images/icons/1.jpg">
-            </div>
-            <div class="wrapper">
+              </div></a>
+              <a href="#"><div class="wrapper">
                 <div class="text">вороны никогда не забывают лиц</div>
                 <img src="images/icons/2.jpg">
-            </div>
-            <div class="wrapper">
+              </div></a>
+              <a href="#"><div class="wrapper">
                 <div class="text">у медуз нет сердца</div>
                 <img src="images/icons/3.jpg">
-            </div>
-            <div class="wrapper">
+              </div></a>
+              <a href="#"><div class="wrapper">
                 <div class="text">беременность акул длится 4 года</div>
                 <img src="images/icons/4.jpg">
-            </div>
-            <div class="wrapper">
+              </div></a>
+              <a href="#"><div class="wrapper">
                 <div class="text">слишком лень набирать текст</div>
                 <img src="images/icons/5.jpg">
-            </div>
-            <div class="wrapper">
+              </div></a>
+              <a href="#"><div class="wrapper">
                 <div class="text">лисы почти все делают в одиночестве</div>
                 <img src="images/icons/6.jpg">
-            </div>
-            <div class="wrapper">
+              </div></a>
+              <a href="#"><div class="wrapper">
                 <div class="text">зебры спят в стае</div>
                 <img src="images/icons/7.jpg">
-            </div>
-            <div class="wrapper">
+              </div></a>
+              <a href="#"><div class="wrapper">
                 <div class="text">лоремипсум</div>
                 <img src="images/icons/8.jpg">
-            </div>
+              </div></a>
+          </div>
         </div>
         <label for="modal-open">
             <div class="button">Регистрация</div>
@@ -235,5 +237,8 @@
     </div>
     
     <script src="js/custom/aTagging.js" async></script>
+    <script src="js/libs/hammer-2.0.8.min.js" defer></script>
+    <script src="js/custom/hammerSlider.js" defer></script>
+
 </body>
 </html>
